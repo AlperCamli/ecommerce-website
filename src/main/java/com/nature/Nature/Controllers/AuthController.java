@@ -1,6 +1,7 @@
 package com.nature.Nature.Controllers;
 
 import com.nature.Nature.Model.User;
+import com.nature.Nature.Model.LoginRequest;
 import com.nature.Nature.Service.AuthService;
 import org.springframework.web.bind.annotation.*;
 
@@ -22,12 +23,4 @@ public class AuthController {
     public String login(@RequestBody LoginRequest request) {
         return authService.login(request.getEmail(), request.getPassword());
     }
-}
-
-class LoginRequest {
-    private String email;
-    private String password;
-
-    public String getEmail() { return email; }
-    public String getPassword() { return password; }
 }
